@@ -11,6 +11,9 @@
 //   )
 // }
 
+//Helps to define prop types
+import PropTypes from "prop-types";
+
 
 const getName = () => 'Hello Hiram';
 
@@ -23,14 +26,25 @@ const newMessage = {
   name : 'Josue Hiram'
 }
 
-export const FirstApp = () => {
+export const FirstApp = ({ title }) => {
   return (
     <>
-      <h1>{ getName() }</h1>
+      <h1>{ title }</h1>
+      {/* <h1>{ getName() }</h1> */}
       {/* <h1>{ name }</h1> */}
       {/* <code>{ JSON.stringify(newMessage) }</code> */}
       <p>Parent element example</p>
     </>
 
   )
+}
+
+//Set prop types
+FirstApp.propTypes = {
+  title: PropTypes.string.isRequired
+}
+
+//Set default props
+FirstApp.defaultProps = {
+  title: 'No title sended'
 }
