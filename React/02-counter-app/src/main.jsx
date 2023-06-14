@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom/client';
 // import { FirstApp } from './FirstApp';
 import { CounterApp } from './CounterApp';
 
-import './Styles.css'
+import './index.css'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
