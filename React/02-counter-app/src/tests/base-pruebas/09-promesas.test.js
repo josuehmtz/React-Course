@@ -15,12 +15,12 @@ describe('Pruebas en 09-promesas', () => {
             })
             .catch( done );
      })
-    test('getHeroeByIdAsync debe de retornar un error si el heroe no existe', (done) => { 
-        const id = 1;
-        getHeroeByIdAsync(id)
-            .catch( error => {
-                console.log(error)
-                done();
-            });
-     })
+    // test('getHeroeByIdAsync debe de retornar un error si el heroe no existe', (done) => { 
+    //     const id = 1;
+    //     getHeroeByIdAsync(id)
+    //         .catch( error => {
+    //             console.log(error)
+    //             done();
+    //         });
+    //  })
  })

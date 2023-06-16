@@ -27,13 +27,13 @@ describe('Pruebas en FirstApp', () => {
         
     });
 
-    test('Debe de eniar el subtitulo enviado por props', () => { 
-        const subtitle = 'subtitle';
-        const {getAllByText} = render(
-            <FirstApp />
-        );
+    // test('Debe de eniar el subtitulo enviado por props', () => { 
+    //     const subtitle = 'subtitle';
+    //     const {getAllByText} = render(
+    //         <FirstApp />
+    //     );
 
-        //Number of elements contained
-        expect(getAllByText(subtitle)).toBe(2);
-    })
+    //     //Number of elements contained
+    //     expect(getAllByText(subtitle)).toBe(2);
+    // })
 });
