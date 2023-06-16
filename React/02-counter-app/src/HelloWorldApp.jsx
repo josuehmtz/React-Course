@@ -1,5 +1,7 @@
 export const HelloWorldApp = () => {
-    return (<h1>This is my first React App</h1>);
+    return (
+        <h1>This is my first React App</h1>
+    );
 }
 
 

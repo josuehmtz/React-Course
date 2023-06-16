@@ -29,7 +29,7 @@ const newMessage = {
 export const FirstApp = ({ title }) => {
   return (
     <>
-      <h1>{ title }</h1>
+      <h1 data-testid="testTitle">{ title }</h1>
       {/* <h1>{ getName() }</h1> */}
       {/* <h1>{ name }</h1> */}
       {/* <code>{ JSON.stringify(newMessage) }</code> */}
@@ -46,5 +46,5 @@ FirstApp.propTypes = {
 
 //Set default props
 FirstApp.defaultProps = {
-  title: 'No title sended'
+  // title: 'No title sended'
 }
