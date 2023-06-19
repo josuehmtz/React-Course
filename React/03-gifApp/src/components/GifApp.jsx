@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { AddCategory  } from "./AddCategory";
-import { GifGrid } from "./GifGrid";
+import { AddCategory, GifGrid } from "./";
 
 export const GifApp = () => {
 
-  const [categories, setCategories] = useState(['Venom']);
+  const [categories, setCategories] = useState(['Gravity Falls']);
 
   const onAddCategory = (category) => {
 
@@ -15,10 +14,8 @@ export const GifApp = () => {
 
   return (
     <>
-        <h1 className="text-blue-900 m-3 font-bold">GifsApp</h1>
-        <div className="inline-flex">
-          <AddCategory onNewCategory={onAddCategory}/>
-        </div>
+        <h1 className="m-3 text-blue-900 font-bold text-5xl">GifsApp by Josue Martinez</h1>
+        <AddCategory onNewCategory={onAddCategory}/>
         {
           categories.map(category => (
             <GifGrid key={category} category={category}/>

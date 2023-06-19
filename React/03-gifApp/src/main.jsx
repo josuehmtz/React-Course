@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-import { GifApp } from './components/GifApp';
+import { GifApp } from './components';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

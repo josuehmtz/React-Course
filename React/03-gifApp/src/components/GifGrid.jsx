@@ -1,15 +1,23 @@
+import { useFetchGifs } from "../hooks/useFetchGifs";
+import { GifCard } from "./GifCard";
+
 export const GifGrid = ({category}) => {
 
-    const gifs = [1,2,3,4,5];
-
+    const { images, isLoading } = useFetchGifs(category);
+    
     return (
         <>
-            <h3 className="tracking-widest p-3 text-4xl text-bold">{category}</h3>
+            <h3 className="tracking-widest p-3 text-3xl text-bold">{category}</h3>
             {
-                gifs.map( gif => (
-                    <p key={gif} className="pl-3 pb-2">{gif}</p>
-                ))
+                isLoading && ( <h2 className="text-6xl">Loading...</h2> )
             }
+            <div className="flex flex-wrap gap-6 flex-auto">
+                {
+                    images.map((image) => (
+                        <GifCard key={image.id} {...image}/>
+                    ))
+                }
+            </div>
         </>
     )
 }
