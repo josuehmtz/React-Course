@@ -5,7 +5,7 @@ import { Message } from "./Message"
 
 export const FormWithCustomHook = () => {
 
-    const {username, email, password, formState, onInputChange} = useForm({
+    const {username, email, password, formState, onInputChange, onResetForm} = useForm({
         username: 'coteHiram',
         email: 'jhiram.alvz@gmail.com',
         password: ''
@@ -34,6 +34,7 @@ export const FormWithCustomHook = () => {
             {
                 (username == 'cotefito') && <Message />
             }
+            <button className="rounded-full bg-blue-900 text-white p-2" onClick={onResetForm}>Reset</button>
         </>
     )
 }
